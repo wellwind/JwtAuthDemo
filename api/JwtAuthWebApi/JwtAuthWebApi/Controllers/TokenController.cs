@@ -6,10 +6,12 @@ using System.Net.Http.Formatting;
 using System.Text;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Jose;
 
 namespace JwtAuthWebApi.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TokenController : ApiController
     {
         // POST api/values
